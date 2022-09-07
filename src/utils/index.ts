@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const isFalsy = (value: any) => (value === 0 ? false : !value);
+export const isFalsy = (value: any): boolean => (value === 0 ? false : !value);
 
 // 在一个函数里面， 改变传入对象本身是不好的
 export const cleanObject = (object: object) => {

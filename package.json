@@ -32,7 +32,8 @@
     "extends": [
       "react-app",
       "react-app/jest",
-      "prettier"
+      "prettier",
+      "plugin:react-hooks/recommended"
     ]
   },
   "browserslist": {
@@ -48,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "2.7.1"

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 
-export const isFalsy = (value: any): boolean => (value === 0 ? false : !value);
+export const isFalsy = (value: unknown): boolean => {
+  return value === 0 ? false : !value;
+};
 
 // 在一个函数里面， 改变传入对象本身是不好的
 export const cleanObject = (object: object) => {
@@ -24,7 +26,8 @@ export const useMount = (callback: () => void) => {
   }, []);
 };
 
-export const useDebounce = (value: any, delay?: number) => {
+// 后面用泛型解决
+export const useDebounce = (value: unknown, delay?: number): any => {
   const [debouncedValue, setDebouncedValue] = useState(value);
 
   useEffect(() => {
